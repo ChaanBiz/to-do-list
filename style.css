@@ -10,6 +10,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5rem;
+}
+body h1 {
+  text-align: center;
+}
+body h3 {
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */
