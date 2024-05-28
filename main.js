@@ -1,6 +1,8 @@
-let items = ["got"]
+let items = []
 
-const itemDiv = document.getElementById("items")
+const itemDiv = document.getElementById("items"),
+input = document.getElementById("itemInput"),
+btnAdd = document.getElementById("add")
 
 function load() {
 
@@ -38,13 +40,7 @@ function render() {
     }
 }
 
-render()
-
 function save() {
-
-}
-
-function add() {
 
 }
 
@@ -52,3 +48,14 @@ function remove(idx) {
     items.splice(idx, 1)
     render()
 }
+
+btnAdd.addEventListener("click", () => {
+    const value = input.value
+    if (!value) {
+        alert("Fill the input to add an item.")
+        return
+    }
+    items.push(value)
+    render()
+    input.value = ""
+})
