@@ -41,4 +41,14 @@ body {
             }
         }
     }
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        accent-color: rgb(172, 153, 129);
+        color: white;
+        border-radius: 10px;
+        display: inline-block;
+        position: relative;
+    }
 }

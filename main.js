@@ -20,12 +20,6 @@ function render() {
         let check = document.createElement("INPUT")
         check.setAttribute("type", "checkbox")
         check.classList.add("checkbox")
-        check.style.width = "20px"
-        check.style.height = "20px"
-        check.style.marginRight = "20px"
-        check.style.borderRadius = "50px"
-        check.style.border = "none"
-        check
 
         const text = document.createElement("p")
         text.style.display = "inline"
