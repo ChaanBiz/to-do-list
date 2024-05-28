@@ -14,6 +14,18 @@ function render() {
     for (const [idx, item] of Object.entries(items)) {
         const container = document.createElement("div")
         container.style.marginBottom = "10px"
+        container.style.display = "flex"
+        container.style.alignItems = "center"
+
+        let check = document.createElement("INPUT")
+        check.setAttribute("type", "checkbox")
+        check.classList.add("checkbox")
+        check.style.width = "20px"
+        check.style.height = "20px"
+        check.style.marginRight = "20px"
+        check.style.borderRadius = "50px"
+        check.style.border = "none"
+        check
 
         const text = document.createElement("p")
         text.style.display = "inline"
@@ -32,6 +44,8 @@ function render() {
         button.style.cursor = "pointer"
         button.onclick = () => remove(idx)
 
+        
+        container.appendChild(check)
         container.appendChild(text)
         container.appendChild(button)
 
