@@ -9,8 +9,6 @@ function load() {
 function render() {
     itemDiv.innerHTML = null
 
-
-
     for (const [idx, item] of Object.entries(items)) {
         const container = document.createElement("div")
         container.style.marginBottom = "10px"
@@ -29,6 +27,7 @@ function render() {
         button.style.backgroundColor = "rgb(172, 153, 129)"
         button.style.color = "rgb(252, 246, 237)"
         button.style.fontSize = "18px"
+        button.style.cursor = "pointer"
         button.onclick = () => remove(idx)
 
         container.appendChild(text)
@@ -50,5 +49,6 @@ function add() {
 }
 
 function remove(idx) {
-
+    items.splice(idx, 1)
+    render()
 }
