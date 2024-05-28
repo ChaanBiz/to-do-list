@@ -7,8 +7,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   padding-top: 5rem;
   background-color: antiquewhite;
 }
@@ -39,7 +37,7 @@ body .items .add button {
   border-radius: 20px;
   border: none;
   background-color: rgb(172, 153, 129);
-  color: rgb(240, 231, 218);
+  color: rgb(240, 232, 221);
 }
 
 /*# sourceMappingURL=style.css.map */
