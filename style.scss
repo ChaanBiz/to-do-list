@@ -22,22 +22,26 @@ body {
     }
     .items {
         padding: 20px 40px;
-        .add {
-            input {
-                padding: 7px 20px;
-                font-size: 18px;
-                border-radius: 20px;
-                border: none;
-                background-color: rgb(238, 216, 188);
-                outline: none;
-            }
-            button {
-                padding: 7px 20px;
-                font-size: 18px;
-                border-radius: 20px;
-                border: none;
-                background-color: rgb(172, 153, 129);
-                color:rgb(252, 246, 237);
+        .cate {
+            display: flex;
+            justify-content: space-between;
+            .add {
+                input {
+                    padding: 7px 20px;
+                    font-size: 18px;
+                    border-radius: 20px;
+                    border: none;
+                    background-color: rgb(238, 216, 188);
+                    outline: none;
+                }
+                button {
+                    padding: 7px 20px;
+                    font-size: 18px;
+                    border-radius: 20px;
+                    border: none;
+                    background-color: rgb(172, 153, 129);
+                    color:rgb(252, 246, 237);
+                }
             }
         }
     }
@@ -54,7 +58,7 @@ body {
         margin-right: 15px;
         cursor: pointer;
     }      
-    input[type="checkbox"]::before {
+    input[type="checkbox"]::after {
         content: "";
         width: 1rem;
         height: 1rem;
@@ -62,7 +66,7 @@ body {
         transform: scale(0);
         background-color: rgb(104, 79, 46);
     }
-    input[type="checkbox"]:checked::before {
+    input[type="checkbox"]:checked::after {
         transform: scale(1);
     }            
 }
