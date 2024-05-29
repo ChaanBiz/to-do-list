@@ -2,10 +2,14 @@ let items = []
 
 const itemDiv = document.getElementById("items"),
 input = document.getElementById("itemInput"),
-btnAdd = document.getElementById("add")
+btnAdd = document.getElementById("add"),
+storage = "items"
 
 function load() {
+    const oldItems = localStorage.getItem(storage)
 
+    if (oldItems) items = JSON.parse(oldItems)
+        render() 
 }
 
 function render() {
@@ -49,7 +53,8 @@ function render() {
 }
 
 function save() {
-
+    const stringItems = JSON.stringify(items)
+    localStorage.setItem(storage, stringItems)
 }
 
 function remove(idx) {
@@ -66,4 +71,7 @@ btnAdd.addEventListener("click", () => {
     items.push(value)
     render()
     input.value = ""
+    save()
 })
+
+document.addEventListener("DOMContentLoaded", load)
