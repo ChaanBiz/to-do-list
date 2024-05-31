@@ -9,7 +9,7 @@ function load() {
     const oldItems = localStorage.getItem(storage)
 
     if (oldItems) items = JSON.parse(oldItems)
-        render() 
+    render() 
 }
 
 function render() {
@@ -42,6 +42,16 @@ function render() {
         button.style.cursor = "pointer"
         button.onclick = () => remove(idx)
 
+        check.addEventListener('change', () => {
+            if (check.checked) {
+                text.style.textDecoration = "line-through"
+                text.style.opacity = ".5"
+            } else {
+                text.style.textDecoration = "none"
+                text.style.opacity = "1"
+            }
+        })
+
         
         container.appendChild(check)
         container.appendChild(text)
@@ -73,7 +83,5 @@ btnAdd.addEventListener("click", () => {
     input.value = ""
     save()
 })
-
-
 
 document.addEventListener("DOMContentLoaded", load)
